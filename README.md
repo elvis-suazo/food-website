@@ -1,14 +1,15 @@
 # food-website
-School project
+## School project
 
 
-WORK IN PROGRESS
+#### WORK IN PROGRESS
 
 
-GOALS
+## GOALS
 
-October 11th
-  Elvis     Good GUI for DB
-  Musa      Use FB/Google API to login to the website
-  佩风       
-  Adel
+#### October 11th
+
+* Elvis       Good GUI for DB
+* Musa        Use FB/Google API to login to the website
+* Beatrice    -
+* Adel        -
