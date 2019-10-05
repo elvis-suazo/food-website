@@ -17,7 +17,8 @@
 - [ ] Use FB/Google API to login to the website
 
 #### Beatrice
-- [ ] abc
+- [ ] Investigate about database security.
+- [ ] Make a good design for the website.
 
 #### Adel
-- [ ] abc
+- [ ] Use Javascript to make the website more dynamic.
