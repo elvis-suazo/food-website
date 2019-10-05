@@ -21,4 +21,4 @@
 - [ ] Make a good design for the website.
 
 #### Adel
-- [ ] Use Javascript to make the website more dynamic.
+- [ ] Investigate about AdSense and how to put ads.
