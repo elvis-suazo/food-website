@@ -1,73 +1,35 @@
-doctype html
-html.
+html
+  head
+  body
+    meta(http-equiv='content-type', content='text/html; charset=iso-8859-1')
+    meta(name='description', content='description')
+    meta(name='keywords', content='keywords')
+    meta(name='author', content='author')
+    link(rel='stylesheet', type='text/css', href='stylesheets/default.css', media='screen')
+    title FOOD FOR YOU
+    .container
+      .gfx
+        span
+      .top
+        .navigation
+          a(href='index')   HOME
+          a(href='give')                  GIVE
+          a#selected(href='take')                  TAKE
+          a(href='about')                 ABOUT
+        .pattern
+          span
+        .header
+          h1 FOOD FOR YOU
+          p Let's fight food waste together
+        .pattern
+          span
+      .content
+        .spacer
+        h1 Here's the food available:
+        ul
+            li #{food_results}
+                each f in food_results
+                    li #{f.name}
 
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
-        <meta name="description" content="description"/>
-        <meta name="keywords" content="keywords"/> 
-        <meta name="author" content="author"/> 
-        <link rel="stylesheet" type="text/css" href="stylesheets/default.css" media="screen"/>
-        <title>FOOD FOR YOU</title>
-    </head>
-
-    <body>
-
-        <div class="container">
-
-        <div class="gfx"><span></span></div>
-
-            <div class="top">
-
-                <div class="navigation">
-                    <a href="index" id="selected">  HOME</a>
-                    <a href="index">                ABOUT</a>
-                    <a href="give">                 GIVE</a>
-                    <a href="take">                 TAKE</a>
-                    <a href="index">                CONTACTS</a>
-                </div>
-
-                <div class="pattern"><span></span></div>
-
-                <div class="header">
-                    <h1>FOOD FOR YOU</h1>
-                    <p>Let's fight food waste together</p>
-                </div>
-
-                <div class="pattern"><span></span></div>
-
-            </div>
-
-            <div class="content">
-
-                <div class="spacer"></div>
-
-                <div class="bg-image img1"></div>
-                <div class="bg-image img2"></div>
-                <div class="bg-image img3"></div>
-                <div class="bg-image img4"></div>
-                <div class="bg-image img5"></div>
-                <div class="bg-image img6"></div>
-            <div class="divider"><span></span></div>
-                
-            
-                <div class="bg-text">suppliers</div>
-
-                <div class="divider"><span></span></div>
-
-                
-
-                
-
-                
-
-            </div>
-                
-            <div class="footer">
-
-                <a> Template design by  XXXXXXXXXXXXXXXXXX</a>
-
-            </div>
-
-        </div>
-
-    </body>
+      .footer
+        a  Template design by  XXXXXXXXXXXXXXXXXX
