@@ -1,32 +1,47 @@
-html
+html(lang='en')
   head
-    meta(http-equiv='content-type', content='text/html; charset=iso-8859-1')
-    meta(name='description', content='description')
-    meta(name='keywords', content='keywords')
-    meta(name='author', content='author')
+    // Latest compiled and minified CSS
     link(rel='stylesheet', type='text/css', href='stylesheets/default.css', media='screen')
+    meta(name='google-signin-client_id', content='302826376812-ff38rj4h0v1ncvncc9dhspdlqsgfo1go.apps.googleusercontent.com')
+    script(src='https://apis.google.com/js/platform.js', async='', defer='')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src='give.js')
     title FOOD FOR YOU
+    style.
+      .data{
+      display: none;
+      }
   body
     .container
       .gfx
         span
       .top
         .navigation
-          a(href='index')   HOME
-          a#selected(href='give')                  GIVE
+          a#selected(href='index')   HOME
+          a(href='give')                  GIVE
           a(href='take')                  TAKE
           a(href='about')                 ABOUT
         .pattern
           span
         .header
           h1 FOOD FOR YOU
+          .g-signin2(data-onsuccess='onSignIn')
+          .data
+            p Profile Details
+            img#pic.img-circle(width='100', height='100')
+            p Email Address
+            p#email.alert.alert-danger
+            button.btn.btn-danger(onclick='signOut()') Sign out
           p Let's fight food waste together
         .pattern
           span
       .content
         .spacer
         .item
-          .title
+          .title Why food waste?
+        .divider
+          span
         .item
-        .footer
-          address  Template design by  XXXXXXXXXXXXXXXXXX
+          .title How will we fight food waste?
+          .footer
+            a  Food For You
