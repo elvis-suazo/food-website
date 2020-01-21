@@ -26,10 +26,19 @@ html
       .content
         .spacer
         h1 Here's the food available:
-        ul
-            li #{food_results}
-                each f in food_results
-                    li #{f.name}
+        div
+        table
+          thead
+            tr
+              td Food
+            
+              td Price
+          tbody
+              each f in food_results
+                  tr
+                    td #{f.name}
+                
+                    td #{f.price}
 
       .footer
         a  Template design by  XXXXXXXXXXXXXXXXXX

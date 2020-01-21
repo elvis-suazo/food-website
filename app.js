@@ -68,12 +68,11 @@ app.get('/take', function (req, res) {
   
     var db = client.db('test');
   
-    db.collection('food').findOne({}, function (findErr, result) {
-      if (findErr) throw findErr;
-      food_data = result;
-      console.log(food_data.name);
+    db.collection("food").find({}).toArray(function(err, result) {
+      if (err) throw err;
+      console.log(result);
       client.close();
-      res.render("take",{food_results:food_data.name});
+      res.render("take",{food_results:result});
     });
     
   });
