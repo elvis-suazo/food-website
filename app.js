@@ -80,6 +80,28 @@ app.get('/take', function (req, res) {
 
 });
 
+app.post('/sign_up',function(req,res){
+  var db=mongoose.connection;
+  db.on('error',console.log.bind(console,"connection error when adding user"));
+  db.once('open', function(callback){
+    console.log("connection succeeded");
+  })
+  var username=req.body.username;
+  var password=req.body.password;
+
+  var data = {
+    "username":username,
+    "password":password
+  }
+
+  db.collection('users').insertOne(data,function(err, collection){
+    if (err) throw err;
+    console.log("User record inserted successfully");
+  });
+  res.render('give');
+})
+
+
 // This is for logging on the console the databas information.
 // Only here for test purposes. It can be disabled.
 MongoClient.connect(url, function (err, client) {
@@ -94,7 +116,7 @@ MongoClient.connect(url, function (err, client) {
   });
 });
 
-app.listen(3000);
+app.listen(80);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
